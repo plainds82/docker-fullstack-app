@@ -5,13 +5,13 @@ sudo: required
 services:
  - docker
 
- before_install:
+before_install:
  - dokcer build -t plainds82/docker-fullstack-app -f ./frontend/Dockerfile.dev ./frontend
 
- script:
+script:
  - docker run -e CI=true plainds82/react-test-app npm run test
 
- after_install:
+after_install:
  - docker build -t plainds82/docker-frontend  ./frontend
  - dokcer build -t plainds82/docker-backend   ./backend
  - dokcer build -t plainds82/docker-nginx     ./nginx
