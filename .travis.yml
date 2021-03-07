@@ -13,8 +13,8 @@ script:
 
 after_install:
  - docker build -t plainds82/docker-frontend  ./frontend
- - dokcer build -t plainds82/docker-backend   ./backend
- - dokcer build -t plainds82/docker-nginx     ./nginx
+ - docker build -t plainds82/docker-backend   ./backend
+ - docker build -t plainds82/docker-nginx     ./nginx
 
  - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_ID" --password-stdin
 
