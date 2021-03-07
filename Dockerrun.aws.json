@@ -14,7 +14,7 @@
             "hostname": "backend",
             "essential": false,
             "memory": 128
-        }
+        },
         {
             "name": "nginx",
             "image": "plainds82/docker-nginx",
